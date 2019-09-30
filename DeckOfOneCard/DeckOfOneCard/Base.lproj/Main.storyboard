@@ -1,24 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fur-OK-yLe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Card View Controller-->
+        <scene sceneID="p3y-cJ-FIj">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="fur-OK-yLe" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hKu-ae-dHF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GD-lv-xfS">
+                                <rect key="frame" x="94" y="710" width="226" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="drawCardButtonTapped:" destination="fur-OK-yLe" eventType="touchUpInside" id="zbJ-JS-4ws"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ppW-a4-1s3">
+                                <rect key="frame" x="94" y="296" width="226" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="3lW-pp-H7a"/>
+                                    <constraint firstAttribute="height" constant="314" id="4h6-Xq-Z1V"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28217056393623352" green="0.59567975997924805" blue="0.5094262957572937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2GD-lv-xfS" firstAttribute="width" secondItem="ppW-a4-1s3" secondAttribute="width" id="OKz-uK-ZcQ"/>
+                            <constraint firstItem="2GD-lv-xfS" firstAttribute="centerX" secondItem="ppW-a4-1s3" secondAttribute="centerX" id="QVg-7h-yZr"/>
+                            <constraint firstItem="ppW-a4-1s3" firstAttribute="centerY" secondItem="hAU-DL-Weh" secondAttribute="centerY" id="YHy-YN-UPl"/>
+                            <constraint firstItem="ppW-a4-1s3" firstAttribute="centerX" secondItem="hAU-DL-Weh" secondAttribute="centerX" id="mUq-2b-AUr"/>
+                            <constraint firstItem="2GD-lv-xfS" firstAttribute="top" secondItem="ppW-a4-1s3" secondAttribute="bottom" constant="100" id="syW-yV-PLI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hAU-DL-Weh"/>
                     </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="ppW-a4-1s3" id="3YD-0D-K2d"/>
+                        <outlet property="drawCardButton" destination="2GD-lv-xfS" id="9Aw-p5-Iho"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yvq-c4-lb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="205.79710144927537" y="112.5"/>
         </scene>
     </scenes>
 </document>
