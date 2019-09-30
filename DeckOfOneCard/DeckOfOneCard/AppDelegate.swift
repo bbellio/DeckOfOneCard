@@ -11,10 +11,13 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Testing networking call
+//        CardController.drawCard(numberOfCards: 3) { (cards) in
+//            for card in cards {
+//                print(card.suit)
+//            }
+//        }
         return true
     }
 

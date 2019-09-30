@@ -14,6 +14,7 @@
 		FC0397CA234268EA006A6116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0397C8234268EA006A6116 /* LaunchScreen.storyboard */; };
 		FC0397D623426B93006A6116 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0397D523426B93006A6116 /* CardViewController.swift */; };
 		FC0397D923426D8C006A6116 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0397D823426D8C006A6116 /* Card.swift */; };
+		FC0397DE234270DA006A6116 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0397DD234270DA006A6116 /* CardController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FC0397CB234268EA006A6116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC0397D523426B93006A6116 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		FC0397D823426D8C006A6116 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FC0397DD234270DA006A6116 /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,8 @@
 		FC0397BC234268E6006A6116 /* DeckOfOneCard */ = {
 			isa = PBXGroup;
 			children = (
-				FC0397DA23426D94006A6116 /* Controllers */,
 				FC0397D723426D81006A6116 /* Models */,
+				FC0397DA23426D94006A6116 /* Controllers */,
 				FC0397D323426993006A6116 /* Views */,
 				FC0397D223426955006A6116 /* Supporting files */,
 			);
@@ -105,9 +107,26 @@
 		FC0397DA23426D94006A6116 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC0397DC234270CE006A6116 /* Model Controller */,
+				FC0397DB234270C1006A6116 /* View Controllers */,
 				FC0397D523426B93006A6116 /* CardViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		FC0397DB234270C1006A6116 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FC0397DC234270CE006A6116 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC0397DD234270DA006A6116 /* CardController.swift */,
+			);
+			name = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0397DE234270DA006A6116 /* CardController.swift in Sources */,
 				FC0397BE234268E6006A6116 /* AppDelegate.swift in Sources */,
 				FC0397C0234268E6006A6116 /* SceneDelegate.swift in Sources */,
 				FC0397D623426B93006A6116 /* CardViewController.swift in Sources */,
