@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Declared a struct called TopLevelDictionary; first dictionary to be decoded by initial dataTask. To find the JSON data, copy and paste the API URL into a JSON Viewer online.
 struct TopLevelDictionary: Codable {
     /*
      JSON
@@ -18,12 +19,10 @@ struct TopLevelDictionary: Codable {
      */
     // Only need to access the key/values we need
     // names of constants must match exactly the names in the API or must use coding keys
-    let success: Bool
-    let deck_id: String
-    let remaining: Int
     let cards: [Card]
 }
 
+// Declared a struct called Card which consists of images of type String (which represents the URL for each card image).
 struct Card: Codable {
     /*
     value : "7"
@@ -33,7 +32,5 @@ struct Card: Codable {
     code : "7S"
     */
     
-    let value: String
     let image: String
-    let suit: String
 }
